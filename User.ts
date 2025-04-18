@@ -13,6 +13,8 @@ export interface IUser {
 
   // Client specific
   companyName?: string;
+  companySize?: string;
+  companyLogo?: string; // URL to the company logo
 
   // Freelancer specific
   surname?: string;
@@ -23,6 +25,7 @@ export interface IUser {
   links?: { title: string; url: string }[];
   note?: string;
   recommendations?: string[];
+  photo?: string; // URL to the freelancer's photo
 
   // AI Agent specific
   website?: string;

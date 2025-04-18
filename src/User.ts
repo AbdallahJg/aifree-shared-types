@@ -23,6 +23,7 @@ export interface IUser {
   links?: { title: string; url: string }[];
   note?: string;
   recommendations?: string[];
+  photo: { type: String; required: false };
 
   // AI Agent specific
   website?: string;
