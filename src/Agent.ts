@@ -8,11 +8,12 @@ export interface AgentConfig {
   temperature: number;
 }
 
-// Common agent response interfaces
+// Base agent response interface
 export interface AgentResponse {
   taskId: string;
   response: string;
   status: "pending" | "completed" | "failed";
+  title: string;
 }
 
 export interface DeleteTaskResponse {

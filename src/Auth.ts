@@ -1,6 +1,6 @@
 // User identity types
 
-import { IdentityType } from "./User";
+import { IdentityType, ApiError, ValidationError } from "./common";
 
 // Base authentication interfaces
 export interface AuthResponse {
@@ -73,15 +73,11 @@ export interface TokenPayload {
 }
 
 // Error interfaces
-export interface AuthError {
+export interface AuthError extends ApiError {
   code:
     | "USER_EXISTS"
     | "VALIDATION_ERROR"
     | "SERVER_ERROR"
     | "INVALID_CREDENTIALS";
-  message: string;
-  errors?: Array<{
-    field: string;
-    message: string;
-  }>;
+  errors?: ValidationError[];
 }
