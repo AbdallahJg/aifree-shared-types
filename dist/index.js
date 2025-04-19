@@ -18,3 +18,4 @@ __exportStar(require("./User"), exports);
 __exportStar(require("./Task"), exports);
 __exportStar(require("./Agent"), exports);
 __exportStar(require("./Auth"), exports);
+__exportStar(require("./JobFamily"), exports);
