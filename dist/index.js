@@ -19,3 +19,4 @@ __exportStar(require("./Task"), exports);
 __exportStar(require("./Agent"), exports);
 __exportStar(require("./Auth"), exports);
 __exportStar(require("./JobFamily"), exports);
+__exportStar(require("./Project"), exports);
