@@ -7,15 +7,6 @@ export enum ProjectStatus {
   CANCELLED = "cancelled",
 }
 
-export enum OutputFormat {
-  TEXT = "text",
-  IMAGE = "image",
-  CODE = "code",
-  AUDIO = "audio",
-  VIDEO = "video",
-  OTHER = "other",
-}
-
 export interface IAttachment {
   filename: string;
   originalName: string;
@@ -32,9 +23,8 @@ export interface IProject {
   jobFamilyId: string;
   jobCategoryId: string;
   startDate: Date;
-  endDate: Date;
-  needsHumanValidation: boolean;
-  outputFormat: OutputFormat;
+  endDate?: Date;
+  needsHumanValidation?: boolean;
   agentName?: string;
   freelancerId?: string;
   validationInstructions?: string;
