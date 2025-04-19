@@ -16,6 +16,15 @@ export enum OutputFormat {
   OTHER = "other",
 }
 
+export interface IAttachment {
+  filename: string;
+  originalName: string;
+  mimeType: string;
+  size: number;
+  url: string;
+  uploadedAt: Date;
+}
+
 export interface IProject {
   _id: string;
   title: string;
@@ -34,4 +43,5 @@ export interface IProject {
   updatedAt: Date;
   clientId: string;
   budget: number;
+  attachments?: IAttachment[];
 }
