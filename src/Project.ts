@@ -27,6 +27,7 @@ export interface IProject {
   needsHumanValidation?: boolean;
   agentName?: string;
   freelancerId?: string;
+  applicantFreelancerIds?: string[];
   validationInstructions?: string;
   status: ProjectStatus;
   createdAt: Date;
@@ -34,4 +35,6 @@ export interface IProject {
   clientId: string;
   budget: number;
   attachments?: IAttachment[];
+  conversationId?: string;
+  taskId?: string;
 }
