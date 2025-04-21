@@ -30,7 +30,6 @@ export interface IConversation {
   freelancerId: string;
   projectId: string;
   taskId?: string;
-  projectDetails: IProject;
   messages: Message[];
   status: ConversationStatus;
   lastMessageTimestamp?: Date;

@@ -16,6 +16,14 @@ export interface IAttachment {
   uploadedAt: Date;
 }
 
+export interface IFreelancerApplications {
+  _id: string;
+  conversationId?: string;
+  freelancerId: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface IProject {
   _id: string;
   title: string;
@@ -25,6 +33,7 @@ export interface IProject {
   startDate: Date;
   endDate?: Date;
   needsHumanValidation?: boolean;
+  freelancerApplications?: IFreelancerApplications[];
   agentName?: string;
   freelancerId?: string;
   applicantFreelancerIds?: string[];
