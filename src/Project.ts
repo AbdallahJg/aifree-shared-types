@@ -36,7 +36,6 @@ export interface IProject {
   freelancerApplications?: IFreelancerApplications[];
   agentName?: string;
   freelancerId?: string;
-  applicantFreelancerIds?: string[];
   validationInstructions?: string;
   status: ProjectStatus;
   createdAt: Date;
