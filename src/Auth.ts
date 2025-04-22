@@ -34,14 +34,6 @@ export interface ClientSignupRequest extends BaseSignupRequest {
 
 export interface FreelancerSignupRequest extends BaseSignupRequest {
   type: "freelancer";
-  surname: string;
-  experience: string;
-  headline: string;
-  category: string;
-  skills: string[];
-  links?: { title: string; url: string }[];
-  note?: string;
-  recommendations?: string[];
 }
 
 export interface AgentSignupRequest extends BaseSignupRequest {

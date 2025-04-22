@@ -16,17 +16,6 @@ export interface IUser {
   companySize?: string;
   companyLogo?: string; // URL to the company logo
 
-  // Freelancer specific
-  surname?: string;
-  experience?: string;
-  headline?: string;
-  category?: string;
-  skills?: string[];
-  links?: { title: string; url: string }[];
-  note?: string;
-  recommendations?: string[];
-  photo?: string; // URL to the freelancer's photo
-
   // AI Agent specific
   website?: string;
 }
