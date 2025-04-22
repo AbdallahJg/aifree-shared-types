@@ -5,3 +5,4 @@ export * from "./Auth";
 export * from "./JobFamily";
 export * from "./Project";
 export * from "./Conversation";
+export * from "./Freelancer";
