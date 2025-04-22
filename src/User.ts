@@ -14,5 +14,13 @@ export interface UserResponse extends ApiResponse<IUser> {}
 export interface UserProfile extends IUser {
   companyName?: string;
   companySize?: string;
+  surname?: string;
+  experience?: string;
+  headline?: string;
+  category?: string;
+  skills?: string[];
+  links?: { title: string; url: string }[];
+  note?: string;
+  recommendations?: string[];
   website?: string;
 }
