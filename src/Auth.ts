@@ -1,19 +1,24 @@
 // User identity types
 
 import { IdentityType, ApiError, ValidationError } from "./common";
+import { Freelancer } from "./Freelancer";
 
 // Base authentication interfaces
 export interface AuthResponse {
+  token: string;
   user: {
     id: string;
-    email: string;
-    type: IdentityType;
     name?: string;
+    type: IdentityType;
+    email: string;
+    balance: number;
+    companyName?: string;
+    freelancerId?: string;
   };
-  token: string;
+  freelancer?: Partial<Freelancer>;
 }
 
-export interface LoginRequest {
+export interface AuthRequest {
   email: string;
   password: string;
 }
@@ -24,24 +29,51 @@ export interface BaseSignupRequest {
   password: string;
   name?: string;
   type: IdentityType;
+  imageUrl?: string;
 }
 
 export interface ClientSignupRequest extends BaseSignupRequest {
   type: "client";
-  companyName: string;
-  companySize: string;
+  companyName?: string;
+  companySize?: string;
+  companyLogo?: string;
 }
 
 export interface FreelancerSignupRequest extends BaseSignupRequest {
   type: "freelancer";
-  surname: string;
-  experience: string;
-  headline: string;
-  category: string;
-  skills: string[];
+  surname?: string;
+  experience?: string;
+  headline?: string;
+  category?: string;
+  skills?: string[];
   links?: { title: string; url: string }[];
   note?: string;
   recommendations?: string[];
+  photo?: string;
+  website?: string;
+
+  // New fields
+  availability?: {
+    status: "available" | "partially_available" | "unavailable";
+    availableHours?: number;
+    nextAvailableDate?: Date;
+  };
+  legalDocuments?: {
+    id: string;
+    type: string;
+    verified: boolean;
+    uploadDate: Date;
+    expiryDate?: Date;
+  }[];
+  complianceStatus?: "pending" | "verified" | "rejected";
+  experiences?: {
+    title: string;
+    company: string;
+    description: string;
+    startDate: Date;
+    endDate?: Date;
+    current: boolean;
+  }[];
 }
 
 export interface AgentSignupRequest extends BaseSignupRequest {
@@ -49,10 +81,15 @@ export interface AgentSignupRequest extends BaseSignupRequest {
   website?: string;
 }
 
+export interface AdminSignupRequest extends BaseSignupRequest {
+  type: "admin";
+}
+
 export type SignupRequest =
   | ClientSignupRequest
   | FreelancerSignupRequest
-  | AgentSignupRequest;
+  | AgentSignupRequest
+  | AdminSignupRequest;
 
 // Session interfaces
 export interface SessionUser {

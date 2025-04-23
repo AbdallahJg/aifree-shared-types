@@ -9,6 +9,7 @@ export interface Freelancer {
 
   // Professional info
   experience?: string;
+  yearsOfExperience?: string;
   headline?: string;
   category?: string;
   skills?: string[];
