@@ -39,4 +39,5 @@ export interface Freelancer {
     endDate?: Date;
     current: boolean;
   }[];
+  userId: string;
 }
