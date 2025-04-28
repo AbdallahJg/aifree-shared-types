@@ -40,4 +40,5 @@ export interface Freelancer {
     current: boolean;
   }[];
   userId: string;
+  hourlyRate: number;
 }
