@@ -4,6 +4,9 @@ export interface IUser {
   id: string;
   email: string;
   type: IdentityType;
+  name?: string;
+  balance: number;
+  imageUrl?: string;
   createdAt: Date;
   updatedAt: Date;
 }

@@ -2,7 +2,15 @@
   "name": "aifree-shared-types",
   "version": "1.0.0",
   "description": "A repository of shared TypeScript types and interfaces for use in various projects.",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "test": "echo \"No tests specified\" && exit 0"

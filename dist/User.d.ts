@@ -1,13 +1,20 @@
-export type IdentityType = "admin" | "client" | "freelancer" | "agent";
+import { IdentityType, ApiResponse } from "./common";
 export interface IUser {
+    id: string;
     email: string;
+    type: IdentityType;
     name?: string;
     balance: number;
     imageUrl?: string;
-    type: IdentityType;
-    setPassword: (password: string) => void;
-    validatePassword: (password: string) => boolean;
+    createdAt: Date;
+    updatedAt: Date;
+}
+export interface UserResponse extends ApiResponse<IUser> {
+}
+export interface UserProfile extends IUser {
     companyName?: string;
+    companySize?: string;
+    name?: string;
     surname?: string;
     experience?: string;
     headline?: string;
@@ -19,9 +26,5 @@ export interface IUser {
     }[];
     note?: string;
     recommendations?: string[];
-    photo: {
-        type: String;
-        required: false;
-    };
     website?: string;
 }

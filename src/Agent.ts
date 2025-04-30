@@ -6,6 +6,7 @@ export interface AgentConfig {
   systemPrompt: string;
   maxTokens: number;
   temperature: number;
+  tokensPerCall: number; // Number of tokens required per agent call
 }
 
 // Base agent response interface

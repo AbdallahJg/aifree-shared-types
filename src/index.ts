@@ -7,3 +7,4 @@ export * from "./Project";
 export * from "./Conversation";
 export * from "./Freelancer";
 export * from "./ClientFavorite";
+export * from "./Token";
