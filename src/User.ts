@@ -1,6 +1,6 @@
 import { IdentityType, ApiResponse } from "./common";
 
-export interface IUser {
+export type IUser = {
   id: string;
   email: string;
   type: IdentityType;
@@ -9,7 +9,7 @@ export interface IUser {
   imageUrl?: string;
   createdAt: Date;
   updatedAt: Date;
-}
+};
 
 export interface UserResponse extends ApiResponse<IUser> {}
 

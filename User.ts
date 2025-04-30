@@ -1,6 +1,6 @@
 export type IdentityType = "admin" | "client" | "freelancer" | "agent";
 
-export interface IUser {
+export type IUser = {
   email: string;
   name?: string;
   balance: number;
@@ -19,4 +19,4 @@ export interface IUser {
   // AI Agent specific
   website?: string;
   freelancerId?: string;
-}
+};
