@@ -9,6 +9,8 @@ export type IUser = {
   imageUrl?: string;
   createdAt: Date;
   updatedAt: Date;
+  photo?: string;
+  freelancerId?: string;
 };
 
 export interface UserResponse extends ApiResponse<IUser> {}
