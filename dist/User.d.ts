@@ -1,4 +1,4 @@
-import { IdentityType, ApiResponse } from "./common";
+import { IdentityType, ApiResponse } from "./common.js";
 export type IUser = {
     id: string;
     email: string;
