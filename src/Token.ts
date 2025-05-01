@@ -16,6 +16,7 @@ export interface TokenTransaction {
   type: TransactionType;
   description: string;
   agentId?: string;
+  agentType?: string;
   createdAt: Date;
   paymentId?: string;
   paymentMethod?: string;
