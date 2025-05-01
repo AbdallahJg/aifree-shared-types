@@ -1,4 +1,4 @@
-import { ApiResponse, PaginatedResponse, PaginationParams } from "./common";
+import { ApiResponse, PaginatedResponse, PaginationParams } from "./common.js";
 
 // Token transaction types
 export type TransactionType =
