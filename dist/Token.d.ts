@@ -12,6 +12,7 @@ export interface TokenTransaction {
     paymentMethod?: string;
     status: "pending" | "completed" | "failed";
     price?: number;
+    balanceAfter?: number;
 }
 export interface PurchaseTokensRequest {
     amount: number;
