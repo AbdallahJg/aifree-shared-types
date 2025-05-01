@@ -21,6 +21,7 @@ export interface TokenTransaction {
   paymentMethod?: string;
   status: "pending" | "completed" | "failed";
   price?: number; // in USD or other currency
+  balanceAfter?: number; // Balance after transaction
 }
 
 // Purchase tokens request
