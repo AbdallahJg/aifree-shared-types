@@ -70,7 +70,27 @@ export interface FreelancerSignupRequest extends BaseSignupRequest {
 }
 export interface AgentSignupRequest extends BaseSignupRequest {
     type: "agent";
-    website?: string;
+    description: string;
+    photo: string;
+    apiEndpoint: string;
+    method: "GET" | "POST" | "PUT" | "DELETE";
+    authType: "none" | "apiKey" | "bearerToken" | "basic";
+    authCredentials: Record<string, string>;
+    inputFormat: string;
+    outputFormat: string;
+    webhookUrl?: string;
+    tokenPricePerCall: number;
+    freeTrialCalls: number;
+    categoryId: string;
+    tags: string[];
+    maxInputLength: number;
+    responseTimeout: number;
+    sampleInput: string;
+    sampleOutput: string;
+    ownerName: string;
+    ownerEmail: string;
+    documentationUrl: string;
+    isPublic: boolean;
 }
 export interface AdminSignupRequest extends BaseSignupRequest {
     type: "admin";
