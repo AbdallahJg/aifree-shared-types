@@ -32,7 +32,7 @@ export interface ChatMessage {
 
 // Custom agent interface
 export interface CustomAgent {
-  id?: string;
+  _id?: string;
   name: string;
   description: string;
   photo: string;
