@@ -30,6 +30,58 @@ export interface ChatMessage {
   timestamp: string;
 }
 
+// Custom agent interface
+export interface CustomAgent {
+  id?: string;
+  name: string;
+  description: string;
+  photo: string;
+  apiEndpoint: string;
+  method: "GET" | "POST" | "PUT" | "DELETE";
+  authType: "none" | "apiKey" | "bearerToken" | "basic";
+  authCredentials: Record<string, string>;
+  inputFormat: string;
+  outputFormat: string;
+  webhookUrl?: string;
+  tokenPricePerCall: number;
+  freeTrialCalls: number;
+  categoryId: string;
+  tags: string[];
+  maxInputLength: number;
+  responseTimeout: number;
+  sampleInput: string;
+  sampleOutput: string;
+  ownerName: string;
+  ownerEmail: string;
+  documentationUrl: string;
+  isPublic: boolean;
+  userId: string;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+// Agent category interface
+export interface AgentCategory {
+  id?: string;
+  name: string;
+  description: string;
+  isDefault: boolean;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+// Custom agent request interface
+export interface CustomAgentRequest {
+  prompt: string;
+  metadata?: Record<string, any>;
+  taskId?: string;
+}
+
+// Custom agent response interface
+export interface CustomAgentResponse extends AgentResponse {
+  metadata?: Record<string, any>;
+}
+
 // Agent-specific request interfaces
 export interface ContentWritingRequest {
   prompt: string;
