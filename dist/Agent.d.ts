@@ -24,7 +24,7 @@ export interface ChatMessage {
     timestamp: string;
 }
 export interface CustomAgent {
-    id?: string;
+    _id?: string;
     name: string;
     description: string;
     photo: string;
