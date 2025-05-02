@@ -62,7 +62,7 @@ export interface CustomAgent {
 
 // Agent category interface
 export interface AgentCategory {
-  id?: string;
+  _id?: string;
   name: string;
   description: string;
   isDefault: boolean;
