@@ -52,7 +52,7 @@ export interface CustomAgent {
     updatedAt?: Date;
 }
 export interface AgentCategory {
-    id?: string;
+    _id?: string;
     name: string;
     description: string;
     isDefault: boolean;
