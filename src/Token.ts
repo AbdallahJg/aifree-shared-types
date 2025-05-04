@@ -17,6 +17,7 @@ export interface TokenTransaction {
   description: string;
   agentId?: string;
   agentType?: string;
+  translationKey?: string; // Translation key for localization
   createdAt: Date;
   paymentId?: string;
   paymentMethod?: string;
