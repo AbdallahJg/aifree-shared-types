@@ -8,6 +8,7 @@ export interface TokenTransaction {
     description: string;
     agentId?: string;
     agentType?: string;
+    translationKey?: string;
     createdAt: Date;
     paymentId?: string;
     paymentMethod?: string;

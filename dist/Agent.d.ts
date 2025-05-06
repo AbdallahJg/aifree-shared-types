@@ -38,6 +38,7 @@ export interface CustomAgent {
     tokenPricePerCall: number;
     freeTrialCalls: number;
     categoryId: string;
+    category?: AgentCategory;
     tags: string[];
     maxInputLength: number;
     responseTimeout: number;
@@ -48,6 +49,13 @@ export interface CustomAgent {
     documentationUrl: string;
     isPublic: boolean;
     userId: string;
+    creator?: {
+        username: string;
+        _id: string;
+        email?: string;
+    };
+    promptPlaceholder?: string;
+    parameters?: AgentParameter[];
     createdAt?: Date;
     updatedAt?: Date;
 }
@@ -108,4 +116,16 @@ export interface TranslationResponse extends AgentResponse {
         formality: "formal" | "informal" | "neutral";
         preserveFormatting: boolean;
     };
+}
+export interface AgentParameter {
+    key: string;
+    label: string;
+    type: "text" | "select" | "number" | "boolean";
+    placeholder?: string;
+    defaultValue?: string | number | boolean;
+    options?: {
+        label: string;
+        value: string;
+    }[];
+    required?: boolean;
 }
