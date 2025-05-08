@@ -1,5 +1,6 @@
 // User identity types
 
+import { AgentParameter } from "./Agent";
 import { IdentityType, ApiError, ValidationError } from "./common";
 import { Freelancer } from "./Freelancer";
 
@@ -100,6 +101,8 @@ export interface AgentSignupRequest extends BaseSignupRequest {
   ownerEmail: string;
   documentationUrl: string;
   isPublic: boolean;
+  parameters?: AgentParameter[];
+  promptPlaceholder?: string;
 }
 
 export interface AdminSignupRequest extends BaseSignupRequest {
