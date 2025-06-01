@@ -52,7 +52,6 @@ export interface FreelancerSignupRequest extends BaseSignupRequest {
   recommendations?: string[];
   photo?: string;
   website?: string;
-  hourlyRate?: number;
 
   // New fields
   availability?: {
