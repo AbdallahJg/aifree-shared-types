@@ -8,3 +8,4 @@ export * from "./Conversation";
 export * from "./Freelancer";
 export * from "./ClientFavorite";
 export * from "./Token";
+export * from "./Dashboard";
