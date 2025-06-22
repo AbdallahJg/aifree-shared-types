@@ -46,7 +46,6 @@ export interface FreelancerSignupRequest extends BaseSignupRequest {
     recommendations?: string[];
     photo?: string;
     website?: string;
-    hourlyRate?: number;
     availability?: {
         status: "available" | "partially_available" | "unavailable";
         availableHours?: number;

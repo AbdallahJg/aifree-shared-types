@@ -1,6 +1,7 @@
 export declare enum ProjectStatus {
     DRAFT = "draft",
     OPEN = "open",
+    PENDING_FREELANCER_ACCEPTANCE = "pending_freelancer_acceptance",
     IN_PROGRESS = "in_progress",
     PENDING_VALIDATION = "pending_validation",
     COMPLETED = "completed",
