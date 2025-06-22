@@ -2,11 +2,12 @@ import { IProject } from "./Project";
 
 export interface Message {
   id: string;
-  senderId: string; // User ID of sender
-  receiverId: string; // User ID of receiver
+  senderId: string | null; // User ID of sender, null for system messages
+  receiverId: string | null; // User ID of receiver, null for system messages
   content: string;
   timestamp: Date;
   isRead: boolean;
+  metadata?: Record<string, any>; // Optional metadata for system messages
   attachments?: {
     filename: string;
     originalName: string;
