@@ -1,10 +1,11 @@
 export interface Message {
     id: string;
-    senderId: string;
-    receiverId: string;
+    senderId: string | null;
+    receiverId: string | null;
     content: string;
     timestamp: Date;
     isRead: boolean;
+    metadata?: Record<string, any>;
     attachments?: {
         filename: string;
         originalName: string;
