@@ -18,6 +18,7 @@ export interface UserResponse extends ApiResponse<IUser> {}
 export interface UserProfile extends IUser {
   companyName?: string;
   companySize?: string;
+  companyLogo?: string;
   name?: string;
   surname?: string;
   experience?: string;
@@ -28,4 +29,5 @@ export interface UserProfile extends IUser {
   note?: string;
   recommendations?: string[];
   website?: string;
+  photoUrl?: string;
 }
