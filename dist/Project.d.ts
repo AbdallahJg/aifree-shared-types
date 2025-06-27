@@ -22,6 +22,12 @@ export interface IFreelancerApplications {
     createdAt: Date;
     updatedAt: Date;
 }
+export interface IProjectClient {
+    _id: string;
+    name: string;
+    companyName?: string;
+    companyLogo?: string;
+}
 export interface IProject {
     _id: string;
     title: string;
@@ -43,4 +49,5 @@ export interface IProject {
     attachments?: IAttachment[];
     conversationId?: string;
     taskId?: string;
+    client?: IProjectClient;
 }

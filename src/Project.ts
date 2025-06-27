@@ -25,6 +25,14 @@ export interface IFreelancerApplications {
   updatedAt: Date;
 }
 
+// Client information for projects
+export interface IProjectClient {
+  _id: string;
+  name: string;
+  companyName?: string;
+  companyLogo?: string;
+}
+
 export interface IProject {
   _id: string;
   title: string;
@@ -46,4 +54,6 @@ export interface IProject {
   attachments?: IAttachment[];
   conversationId?: string;
   taskId?: string;
+  // Optional populated client information
+  client?: IProjectClient;
 }
