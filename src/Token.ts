@@ -6,7 +6,9 @@ export type TransactionType =
   | "usage"
   | "refund"
   | "initial"
-  | "sale";
+  | "sale"
+  | "block"
+  | "unblock";
 
 // Token transaction interface
 export interface TokenTransaction {
@@ -70,6 +72,8 @@ export interface TokenTransactionsResponse
 export interface TokenBalanceResponse
   extends ApiResponse<{
     balance: number;
+    blockedBalance: number;
+    availableBalance: number;
   }> {}
 
 // Token pricing interface

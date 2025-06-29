@@ -6,6 +6,7 @@ export type IUser = {
   type: IdentityType;
   name?: string;
   balance: number;
+  blockedBalance: number; // Tokens blocked for active projects
   imageUrl?: string;
   createdAt: Date;
   updatedAt: Date;
