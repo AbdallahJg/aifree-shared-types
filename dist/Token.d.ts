@@ -1,5 +1,5 @@
 import { ApiResponse, PaginatedResponse, PaginationParams } from "./common.js";
-export type TransactionType = "purchase" | "usage" | "refund" | "initial" | "sale";
+export type TransactionType = "purchase" | "usage" | "refund" | "initial" | "sale" | "block" | "unblock";
 export interface TokenTransaction {
     id: string;
     userId: string;
@@ -46,6 +46,8 @@ export interface TokenTransactionsResponse extends PaginatedResponse<TokenTransa
 }
 export interface TokenBalanceResponse extends ApiResponse<{
     balance: number;
+    blockedBalance: number;
+    availableBalance: number;
 }> {
 }
 export interface TokenPricing {
