@@ -1,5 +1,5 @@
-import { IProject } from "./Project";
-import { IUser } from "./User";
+import { IProject } from "./Project.js";
+import { IUser } from "./User.js";
 export interface IReview {
     _id: string;
     projectId: string | IProject;

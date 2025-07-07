@@ -11,6 +11,9 @@ export type IUser = {
     updatedAt: Date;
     photo?: string;
     freelancerId?: string;
+    banned?: boolean;
+    banReason?: string;
+    bannedAt?: Date;
 };
 export interface UserResponse extends ApiResponse<IUser> {
 }

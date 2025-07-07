@@ -1,5 +1,3 @@
-import { IProject } from "./Project";
-
 export interface Message {
   id: string;
   senderId: string | null; // User ID of sender, null for system messages
