@@ -1,6 +1,6 @@
-import { AgentParameter } from "./Agent";
-import { IdentityType, ApiError, ValidationError } from "./common";
-import { Freelancer } from "./Freelancer";
+import { AgentParameter } from "./Agent.js";
+import { IdentityType, ApiError, ValidationError } from "./common.js";
+import { Freelancer } from "./Freelancer.js";
 export interface AuthResponse {
     token: string;
     user: {

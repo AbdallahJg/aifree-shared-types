@@ -1,5 +1,5 @@
-import { ApiResponse } from "./common";
-import { UserProfile } from "./User";
+import { ApiResponse } from "./common.js";
+import { UserProfile } from "./User.js";
 export interface IClientFavorite {
     id: string;
     client: string;

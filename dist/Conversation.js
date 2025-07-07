@@ -3,4 +3,4 @@ export var ConversationStatus;
     ConversationStatus["ACTIVE"] = "active";
     ConversationStatus["ARCHIVED"] = "archived";
     ConversationStatus["CLOSED"] = "closed";
-})(ConversationStatus || (ConversationStatus = {}));
+})(ConversationStatus = ConversationStatus || (ConversationStatus = {}));

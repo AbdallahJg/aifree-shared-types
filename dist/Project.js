@@ -7,4 +7,4 @@ export var ProjectStatus;
     ProjectStatus["PENDING_VALIDATION"] = "pending_validation";
     ProjectStatus["COMPLETED"] = "completed";
     ProjectStatus["CANCELLED"] = "cancelled";
-})(ProjectStatus || (ProjectStatus = {}));
+})(ProjectStatus = ProjectStatus || (ProjectStatus = {}));
