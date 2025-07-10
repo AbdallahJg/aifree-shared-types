@@ -11,3 +11,4 @@ export * from "./Token.js";
 export * from "./Dashboard.js";
 export * from "./AgentReview.js";
 export * from "./Review.js";
+export * from "./Offer.js";
