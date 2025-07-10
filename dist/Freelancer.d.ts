@@ -3,8 +3,7 @@ export interface Freelancer {
     name?: string;
     surname?: string;
     email: string;
-    imageUrl?: string;
-    photo?: string;
+    photoUrl?: string;
     experience?: string;
     yearsOfExperience?: string;
     headline?: string;
