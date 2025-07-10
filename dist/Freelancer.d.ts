@@ -4,6 +4,8 @@ export interface Freelancer {
     surname?: string;
     email: string;
     photoUrl?: string;
+    imageUrl?: string;
+    photo?: string;
     experience?: string;
     yearsOfExperience?: string;
     headline?: string;
