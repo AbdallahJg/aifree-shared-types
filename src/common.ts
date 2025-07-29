@@ -1,5 +1,5 @@
 // Common types used across the application
-export type IdentityType = "admin" | "client" | "freelancer" | "agent";
+export type IdentityType = "admin" | "client" | "freelancer" | "agent" | "saas";
 
 export interface ApiResponse<T> {
   data?: T;

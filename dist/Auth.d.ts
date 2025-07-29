@@ -97,7 +97,17 @@ export interface AgentSignupRequest extends BaseSignupRequest {
 export interface AdminSignupRequest extends BaseSignupRequest {
     type: "admin";
 }
-export type SignupRequest = ClientSignupRequest | FreelancerSignupRequest | AgentSignupRequest | AdminSignupRequest;
+export interface SaasProviderSignupRequest extends BaseSignupRequest {
+    type: "saas";
+    website: string;
+    description: string;
+    logo?: string;
+    pricingModel: string;
+    pricingDetails: string;
+    categoryId: string;
+    supportEmail: string;
+}
+export type SignupRequest = ClientSignupRequest | FreelancerSignupRequest | AgentSignupRequest | AdminSignupRequest | SaasProviderSignupRequest;
 export interface SessionUser {
     id: string;
     email: string;

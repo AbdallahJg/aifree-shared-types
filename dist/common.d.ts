@@ -1,4 +1,4 @@
-export type IdentityType = "admin" | "client" | "freelancer" | "agent";
+export type IdentityType = "admin" | "client" | "freelancer" | "agent" | "saas";
 export interface ApiResponse<T> {
     data?: T;
     error?: string;
