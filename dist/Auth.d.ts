@@ -106,6 +106,7 @@ export interface SaasProviderSignupRequest extends BaseSignupRequest {
     pricingDetails: string;
     categoryId: string;
     supportEmail: string;
+    ownerName?: string;
 }
 export type SignupRequest = ClientSignupRequest | FreelancerSignupRequest | AgentSignupRequest | AdminSignupRequest | SaasProviderSignupRequest;
 export interface SessionUser {

@@ -117,6 +117,7 @@ export interface SaasProviderSignupRequest extends BaseSignupRequest {
   pricingDetails: string;
   categoryId: string;
   supportEmail: string;
+  ownerName?: string;
 }
 
 export type SignupRequest =
