@@ -14,3 +14,4 @@ export * from "./SaasSolution.js";
 export * from "./Task.js";
 export * from "./Token.js";
 export * from "./User.js";
+export * from "./AISearch.js";
