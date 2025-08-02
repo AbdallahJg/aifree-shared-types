@@ -8,7 +8,8 @@ export type TransactionType =
   | "initial"
   | "sale"
   | "block"
-  | "unblock";
+  | "unblock"
+  | "income";
 
 // Token transaction interface
 export interface TokenTransaction {
