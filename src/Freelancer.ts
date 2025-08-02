@@ -1,5 +1,5 @@
 export interface Freelancer {
-  id: string;
+  _id: string;
   // Basic info
   name?: string;
   surname?: string;
