@@ -1,5 +1,5 @@
 import { ApiResponse, PaginatedResponse, PaginationParams } from "./common.js";
-export type TransactionType = "purchase" | "usage" | "refund" | "initial" | "sale" | "block" | "unblock";
+export type TransactionType = "purchase" | "usage" | "refund" | "initial" | "sale" | "block" | "unblock" | "income";
 export interface TokenTransaction {
     id: string;
     userId: string;
