@@ -64,6 +64,14 @@ export interface CustomAgent {
   };
   promptPlaceholder?: string;
   parameters?: AgentParameter[];
+  approvalStatus?: "under_supervision" | "approved" | "declined";
+  approvalNotes?: string;
+  approvedAt?: Date;
+  approvedBy?: {
+    _id: string;
+    username?: string;
+    email?: string;
+  };
   createdAt?: Date;
   updatedAt?: Date;
 }
