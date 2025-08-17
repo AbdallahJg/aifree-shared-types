@@ -18,6 +18,7 @@ export interface MonthlyTrend {
 
 export interface TopAgent {
   _id: string;
+  agentName?: string;
   totalSpent: number;
   usageCount: number;
   lastUsed: Date;
@@ -122,6 +123,9 @@ export interface FreelancerInsight {
   freelancerId: string;
   name: string;
   email: string;
+  photoUrl?: string;
+  imageUrl?: string;
+  photo?: string;
   projectsCompleted: number;
   totalEarned: number;
   averageRating: number;
@@ -156,6 +160,7 @@ export interface ActivityTimelineItem {
   _id: string;
   type: 'project_created' | 'project_completed' | 'payment_made' | 'freelancer_hired' | 'milestone_achieved';
   title: string;
+  translationKey?: string;
   description: string;
   amount?: number;
   timestamp: Date;
