@@ -8,6 +8,8 @@ export type IUser = {
   balance: number;
   blockedBalance: number; // Tokens blocked for active projects
   imageUrl?: string;
+  currency?: string; // User's preferred currency (e.g., 'USD', 'EUR', 'GBP')
+  locale?: string; // User's locale (e.g., 'en-US', 'fr-FR')
   createdAt: Date;
   updatedAt: Date;
   photo?: string;

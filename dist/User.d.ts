@@ -7,6 +7,8 @@ export type IUser = {
     balance: number;
     blockedBalance: number;
     imageUrl?: string;
+    currency?: string;
+    locale?: string;
     createdAt: Date;
     updatedAt: Date;
     photo?: string;
