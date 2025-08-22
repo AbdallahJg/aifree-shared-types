@@ -25,7 +25,8 @@ export interface TokenTransaction {
   paymentId?: string;
   paymentMethod?: string;
   status: "pending" | "completed" | "failed";
-  price?: number; // in USD or other currency
+  price?: number; // Amount paid in the specified currency
+  currency?: string; // Currency used for the payment (e.g., 'USD', 'EUR')
   balanceAfter?: number; // Balance after transaction
 }
 
