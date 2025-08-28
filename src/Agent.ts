@@ -30,6 +30,35 @@ export interface ChatMessage {
   timestamp: string;
 }
 
+// Input type options for custom agents
+export type AgentInputType = 
+  | "text" 
+  | "json" 
+  | "form-data" 
+  | "query-params" 
+  | "file-upload" 
+  | "multipart" 
+  | "xml" 
+  | "csv";
+
+// Output schema configuration for parsing and displaying agent responses
+export interface AgentOutputSchema {
+  type: "json" | "text" | "html" | "markdown" | "xml" | "csv" | "auto";
+  displayFormat: "text" | "table" | "card" | "list" | "custom";
+  fields?: {
+    key: string;
+    label: string;
+    type: "string" | "number" | "boolean" | "date" | "url" | "image" | "object" | "array";
+    displayAs?: "text" | "link" | "image" | "badge" | "progress" | "code" | "json";
+    required?: boolean;
+  }[];
+  customTemplate?: string; // For custom display formatting
+  errorHandling?: {
+    fallbackMessage?: string;
+    showRawResponse?: boolean;
+  };
+}
+
 // Custom agent interface
 export interface CustomAgent {
   _id?: string;
@@ -42,6 +71,9 @@ export interface CustomAgent {
   authCredentials: Record<string, string>;
   inputFormat: string;
   outputFormat: string;
+  inputType?: AgentInputType; // New: Input type selection
+  outputSchema?: AgentOutputSchema; // New: Output schema for parsing and display
+  videoDemo?: string; // New: Video demonstration URL
   webhookUrl?: string;
   tokenPricePerCall: number;
   freeTrialCalls: number;

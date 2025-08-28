@@ -1,4 +1,4 @@
-import { AgentParameter } from "./Agent.js";
+import { AgentParameter, AgentInputType, AgentOutputSchema } from "./Agent.js";
 import { IdentityType, ApiError, ValidationError } from "./common.js";
 import { Freelancer } from "./Freelancer.js";
 export interface AuthResponse {
@@ -78,6 +78,9 @@ export interface AgentSignupRequest extends BaseSignupRequest {
     authCredentials: Record<string, string>;
     inputFormat: string;
     outputFormat: string;
+    inputType?: AgentInputType;
+    outputSchema?: AgentOutputSchema;
+    videoDemo?: string;
     webhookUrl?: string;
     tokenPricePerCall: number;
     freeTrialCalls: number;

@@ -23,6 +23,23 @@ export interface ChatMessage {
     content: string;
     timestamp: string;
 }
+export type AgentInputType = "text" | "json" | "form-data" | "query-params" | "file-upload" | "multipart" | "xml" | "csv";
+export interface AgentOutputSchema {
+    type: "json" | "text" | "html" | "markdown" | "xml" | "csv" | "auto";
+    displayFormat: "text" | "table" | "card" | "list" | "custom";
+    fields?: {
+        key: string;
+        label: string;
+        type: "string" | "number" | "boolean" | "date" | "url" | "image" | "object" | "array";
+        displayAs?: "text" | "link" | "image" | "badge" | "progress" | "code" | "json";
+        required?: boolean;
+    }[];
+    customTemplate?: string;
+    errorHandling?: {
+        fallbackMessage?: string;
+        showRawResponse?: boolean;
+    };
+}
 export interface CustomAgent {
     _id?: string;
     name: string;
@@ -34,6 +51,9 @@ export interface CustomAgent {
     authCredentials: Record<string, string>;
     inputFormat: string;
     outputFormat: string;
+    inputType?: AgentInputType;
+    outputSchema?: AgentOutputSchema;
+    videoDemo?: string;
     webhookUrl?: string;
     tokenPricePerCall: number;
     freeTrialCalls: number;
