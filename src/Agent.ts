@@ -65,28 +65,15 @@ export interface CustomAgent {
   name: string;
   description: string;
   photo: string;
-  apiEndpoint: string;
-  method: "GET" | "POST" | "PUT" | "DELETE";
-  authType: "none" | "apiKey" | "bearerToken" | "basic";
-  authCredentials: Record<string, string>;
-  inputFormat: string;
-  outputFormat: string;
-  inputType?: AgentInputType; // New: Input type selection
-  outputSchema?: AgentOutputSchema; // New: Output schema for parsing and display
-  videoDemo?: string; // New: Video demonstration URL
-  webhookUrl?: string;
-  tokenPricePerCall: number;
-  freeTrialCalls: number;
   categoryId: string;
   category?: AgentCategory; // Populated category object
   tags: string[];
-  maxInputLength: number;
-  responseTimeout: number;
   sampleInput: string;
   sampleOutput: string;
   ownerName: string;
   ownerEmail: string;
   documentationUrl: string;
+  link: string;
   isPublic: boolean;
   userId: string;
   creator?: {
@@ -94,8 +81,6 @@ export interface CustomAgent {
     _id: string;
     email?: string;
   };
-  promptPlaceholder?: string;
-  parameters?: AgentParameter[];
   approvalStatus?: "under_supervision" | "approved" | "declined";
   approvalNotes?: string;
   approvedAt?: Date;

@@ -81,30 +81,17 @@ export interface AgentSignupRequest extends BaseSignupRequest {
   type: "agent";
   description: string;
   photo: string;
-  apiEndpoint: string;
-  method: "GET" | "POST" | "PUT" | "DELETE";
-  authType: "none" | "apiKey" | "bearerToken" | "basic";
-  authCredentials: Record<string, string>;
-  inputFormat: string;
-  outputFormat: string;
-  inputType?: AgentInputType; // New: Input type selection
-  outputSchema?: AgentOutputSchema; // New: Output schema for parsing and display
-  videoDemo?: string; // New: Video demonstration URL
-  webhookUrl?: string;
   tokenPricePerCall: number;
   freeTrialCalls: number;
   categoryId: string;
   tags: string[];
-  maxInputLength: number;
-  responseTimeout: number;
   sampleInput: string;
   sampleOutput: string;
   ownerName: string;
   ownerEmail: string;
   documentationUrl: string;
+  link: string;
   isPublic: boolean;
-  parameters?: AgentParameter[];
-  promptPlaceholder?: string;
 }
 
 export interface AdminSignupRequest extends BaseSignupRequest {
