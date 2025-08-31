@@ -12,19 +12,11 @@ export interface MonthlyTrend {
     spent: number;
     transactions: number;
 }
-export interface TopAgent {
-    _id: string;
-    agentName?: string;
-    totalSpent: number;
-    usageCount: number;
-    lastUsed: Date;
-}
 export interface RecentActivity {
     _id: string;
     amount: number;
     description: string;
     createdAt: Date;
-    agentType?: string;
     translationKey?: string;
 }
 export interface PurchaseVsUsage {
@@ -35,7 +27,6 @@ export interface PurchaseVsUsage {
 export interface TransactionAnalytics {
     spendingSummary: SpendingSummary;
     monthlyTrends: MonthlyTrend[];
-    topAgents: TopAgent[];
     recentActivity: RecentActivity[];
     purchaseVsUsage: PurchaseVsUsage[];
 }

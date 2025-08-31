@@ -23,28 +23,11 @@ export interface ChatMessage {
     content: string;
     timestamp: string;
 }
-export type AgentInputType = "text" | "json" | "form-data" | "query-params" | "file-upload" | "multipart" | "xml" | "csv";
-export interface AgentOutputSchema {
-    type: "json" | "text" | "html" | "markdown" | "xml" | "csv" | "auto";
-    displayFormat: "text" | "table" | "card" | "list" | "custom";
-    fields?: {
-        key: string;
-        label: string;
-        type: "string" | "number" | "boolean" | "date" | "url" | "image" | "object" | "array";
-        displayAs?: "text" | "link" | "image" | "badge" | "progress" | "code" | "json";
-        required?: boolean;
-    }[];
-    customTemplate?: string;
-    errorHandling?: {
-        fallbackMessage?: string;
-        showRawResponse?: boolean;
-    };
-}
 export interface CustomAgent {
     _id?: string;
     name: string;
     description: string;
-    photo: string;
+    photo?: string;
     categoryId: string;
     category?: AgentCategory;
     tags: string[];
@@ -129,16 +112,4 @@ export interface TranslationResponse extends AgentResponse {
         formality: "formal" | "informal" | "neutral";
         preserveFormatting: boolean;
     };
-}
-export interface AgentParameter {
-    key: string;
-    label: string;
-    type: "text" | "select" | "number" | "boolean";
-    placeholder?: string;
-    defaultValue?: string | number | boolean;
-    options?: {
-        label: string;
-        value: string;
-    }[];
-    required?: boolean;
 }

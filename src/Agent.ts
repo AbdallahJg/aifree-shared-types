@@ -30,41 +30,14 @@ export interface ChatMessage {
   timestamp: string;
 }
 
-// Input type options for custom agents
-export type AgentInputType = 
-  | "text" 
-  | "json" 
-  | "form-data" 
-  | "query-params" 
-  | "file-upload" 
-  | "multipart" 
-  | "xml" 
-  | "csv";
 
-// Output schema configuration for parsing and displaying agent responses
-export interface AgentOutputSchema {
-  type: "json" | "text" | "html" | "markdown" | "xml" | "csv" | "auto";
-  displayFormat: "text" | "table" | "card" | "list" | "custom";
-  fields?: {
-    key: string;
-    label: string;
-    type: "string" | "number" | "boolean" | "date" | "url" | "image" | "object" | "array";
-    displayAs?: "text" | "link" | "image" | "badge" | "progress" | "code" | "json";
-    required?: boolean;
-  }[];
-  customTemplate?: string; // For custom display formatting
-  errorHandling?: {
-    fallbackMessage?: string;
-    showRawResponse?: boolean;
-  };
-}
 
 // Custom agent interface
 export interface CustomAgent {
   _id?: string;
   name: string;
   description: string;
-  photo: string;
+  photo?: string;
   categoryId: string;
   category?: AgentCategory; // Populated category object
   tags: string[];
@@ -163,16 +136,4 @@ export interface TranslationResponse extends AgentResponse {
   };
 }
 
-// Agent parameter interface for custom agent configuration
-export interface AgentParameter {
-  key: string;
-  label: string;
-  type: "text" | "select" | "number" | "boolean";
-  placeholder?: string;
-  defaultValue?: string | number | boolean;
-  options?: {
-    label: string;
-    value: string;
-  }[];
-  required?: boolean;
-}
+

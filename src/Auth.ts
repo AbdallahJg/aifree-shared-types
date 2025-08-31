@@ -1,6 +1,6 @@
 // User identity types
 
-import { AgentParameter, AgentInputType, AgentOutputSchema } from "./Agent.js";
+
 import { IdentityType, ApiError, ValidationError } from "./common.js";
 import { Freelancer } from "./Freelancer.js";
 
@@ -80,9 +80,7 @@ export interface FreelancerSignupRequest extends BaseSignupRequest {
 export interface AgentSignupRequest extends BaseSignupRequest {
   type: "agent";
   description: string;
-  photo: string;
-  tokenPricePerCall: number;
-  freeTrialCalls: number;
+  photo?: string;
   categoryId: string;
   tags: string[];
   sampleInput: string;

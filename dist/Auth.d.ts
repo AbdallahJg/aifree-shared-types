@@ -70,9 +70,7 @@ export interface FreelancerSignupRequest extends BaseSignupRequest {
 export interface AgentSignupRequest extends BaseSignupRequest {
     type: "agent";
     description: string;
-    photo: string;
-    tokenPricePerCall: number;
-    freeTrialCalls: number;
+    photo?: string;
     categoryId: string;
     tags: string[];
     sampleInput: string;

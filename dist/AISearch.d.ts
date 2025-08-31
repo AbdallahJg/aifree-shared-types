@@ -48,8 +48,6 @@ export interface AIAgent {
         description?: string;
     };
     ownerName?: string;
-    tokenPricePerCall?: number;
-    freeTrialCalls?: number;
     tags?: string[];
     type: 'built-in' | 'custom';
     endpoint?: string;
