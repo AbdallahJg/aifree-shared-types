@@ -23,6 +23,13 @@ export interface ChatMessage {
     content: string;
     timestamp: string;
 }
+export interface SocialMediaLinks {
+    github?: string;
+    x?: string;
+    youtube?: string;
+    linkedin?: string;
+    website?: string;
+}
 export interface CustomAgent {
     _id?: string;
     name: string;
@@ -31,12 +38,12 @@ export interface CustomAgent {
     categoryId: string;
     category?: AgentCategory;
     tags: string[];
-    sampleInput: string;
-    sampleOutput: string;
+    partners: string[];
     ownerName: string;
     ownerEmail: string;
     documentationUrl: string;
     link: string;
+    socialMediaLinks?: SocialMediaLinks;
     isPublic: boolean;
     userId: string;
     creator?: {

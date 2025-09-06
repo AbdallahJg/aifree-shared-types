@@ -1,7 +1,7 @@
 export interface IAgentReview {
   _id?: string;
-  taskId: string;
   userId: string;
+  agentId: string;
   agentType: string;
   rating: number;
   comment: string;
@@ -9,8 +9,18 @@ export interface IAgentReview {
   updatedAt?: Date;
 }
 
+export interface IAgentReviewWithUser extends Omit<IAgentReview, 'userId'> {
+  userId: {
+    _id: string;
+    name: string;
+    email: string;
+    username?: string;
+    companyName?: string;
+  };
+}
+
 export interface CreateAgentReviewRequest {
-  taskId: string;
+  agentType: string;
   rating: number;
   comment: string;
 }

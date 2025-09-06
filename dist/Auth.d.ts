@@ -73,12 +73,18 @@ export interface AgentSignupRequest extends BaseSignupRequest {
     photo?: string;
     categoryId: string;
     tags: string[];
-    sampleInput: string;
-    sampleOutput: string;
+    partners: string[];
     ownerName: string;
     ownerEmail: string;
     documentationUrl: string;
     link: string;
+    socialMediaLinks?: {
+        github?: string;
+        x?: string;
+        youtube?: string;
+        linkedin?: string;
+        website?: string;
+    };
     isPublic: boolean;
 }
 export interface AdminSignupRequest extends BaseSignupRequest {

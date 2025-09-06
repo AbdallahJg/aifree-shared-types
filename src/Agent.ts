@@ -32,6 +32,15 @@ export interface ChatMessage {
 
 
 
+// Social media links interface
+export interface SocialMediaLinks {
+  github?: string;
+  x?: string;
+  youtube?: string;
+  linkedin?: string;
+  website?: string;
+}
+
 // Custom agent interface
 export interface CustomAgent {
   _id?: string;
@@ -41,12 +50,12 @@ export interface CustomAgent {
   categoryId: string;
   category?: AgentCategory; // Populated category object
   tags: string[];
-  sampleInput: string;
-  sampleOutput: string;
+  partners: string[];
   ownerName: string;
   ownerEmail: string;
   documentationUrl: string;
   link: string;
+  socialMediaLinks?: SocialMediaLinks;
   isPublic: boolean;
   userId: string;
   creator?: {
