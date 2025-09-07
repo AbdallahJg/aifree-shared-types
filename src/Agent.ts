@@ -41,6 +41,9 @@ export interface SocialMediaLinks {
   website?: string;
 }
 
+// Pricing model type for agents
+export type PricingModel = "Free" | "Token Based" | "Task Based" | "Freemium" | "Subscription";
+
 // Custom agent interface
 export interface CustomAgent {
   _id?: string;
@@ -58,6 +61,8 @@ export interface CustomAgent {
   socialMediaLinks?: SocialMediaLinks;
   isPublic: boolean;
   userId: string;
+  pricingModel: PricingModel;
+  views?: number;
   creator?: {
     username: string;
     _id: string;

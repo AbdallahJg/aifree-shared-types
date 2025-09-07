@@ -30,6 +30,7 @@ export interface SocialMediaLinks {
     linkedin?: string;
     website?: string;
 }
+export type PricingModel = "Free" | "Token Based" | "Task Based" | "Freemium" | "Subscription";
 export interface CustomAgent {
     _id?: string;
     name: string;
@@ -46,6 +47,8 @@ export interface CustomAgent {
     socialMediaLinks?: SocialMediaLinks;
     isPublic: boolean;
     userId: string;
+    pricingModel: PricingModel;
+    views?: number;
     creator?: {
         username: string;
         _id: string;
